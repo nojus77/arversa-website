@@ -31,101 +31,104 @@ const fadeUp = {
 
 export function HeroSection(): React.ReactElement {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden flex items-center">
-      {/* Background team photo */}
-      <Image
-        src="/images/team-photo.jpg"
-        alt="Arversa komanda darbo metu"
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-      />
-
-      {/* Dark gradient overlay — left side darker for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
-
-      {/* Content — left aligned, vertically centered */}
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 py-16 lg:py-24">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          animate="visible"
-          className="max-w-3xl"
-        >
-          {/* Badge */}
-          <motion.div variants={fadeUp}>
-            <span className="inline-block rounded-full bg-amber/15 px-5 py-2 text-sm font-medium text-amber mb-6 lg:mb-8 backdrop-blur-sm">
-              {"11+ met\u0173 patirties"}
-            </span>
-          </motion.div>
-
-          {/* Main heading */}
-          <motion.h1
-            variants={fadeUp}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1] mb-5 lg:mb-6"
-          >
-            {"Statybos ir gerb\u016Bvio"}
-            <br />
-            {"darbai visoje"}
-            <br />
-            {"Lietuvoje"}
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            variants={fadeUp}
-            className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mb-8 lg:mb-10"
-          >
-            {
-              "Trinkeli\u0173 klojimas, technikos nuoma, \u017Eem\u0117s kasimas ir griovimo darbai \u2014 nuo 2008 met\u0173."
-            }
-          </motion.p>
-
-          {/* CTAs */}
+    <section className="relative min-h-[90vh] overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[90vh]">
+        {/* Left — Content */}
+        <div className="relative bg-charcoal flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-20 py-20 lg:py-24 order-2 lg:order-1">
           <motion.div
-            variants={fadeUp}
-            className="flex flex-wrap gap-4 mb-12 lg:mb-16"
+            variants={stagger}
+            initial="hidden"
+            animate="visible"
+            className="max-w-xl"
           >
-            <Button href="/kontaktai" size="lg">
-              {"Gauti pasi\u016Blym\u0105"}
-            </Button>
-            <Button
-              href="/atlikti-darbai"
-              variant="outline"
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-white/50"
+            {/* Badge */}
+            <motion.div variants={fadeUp}>
+              <span className="inline-block rounded-full bg-amber/15 px-5 py-2 text-sm font-medium text-amber mb-6 lg:mb-8">
+                {"11+ met\u0173 patirties"}
+              </span>
+            </motion.div>
+
+            {/* Main heading */}
+            <motion.h1
+              variants={fadeUp}
+              className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white leading-[1.1] mb-5 lg:mb-6"
             >
-              Atlikti darbai
-            </Button>
-          </motion.div>
+              {"Statybos ir gerb\u016Bvio"}
+              <br />
+              {"darbai visoje"}
+              <br />
+              <span className="text-amber">{"Lietuvoje"}</span>
+            </motion.h1>
 
-          {/* Stats strip */}
-          <motion.div
-            variants={fadeUp}
-            className="flex items-center gap-6 md:gap-8 pt-8 border-t border-white/20"
-          >
-            {STATS.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="flex items-center gap-6 md:gap-8"
+            {/* Subtitle */}
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl text-white/70 leading-relaxed max-w-lg mb-8 lg:mb-10"
+            >
+              {
+                "Trinkeli\u0173 klojimas, technikos nuoma, \u017Eem\u0117s kasimas ir griovimo darbai \u2014 nuo 2008 met\u0173."
+              }
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-wrap gap-4 mb-12 lg:mb-16"
+            >
+              <Button href="/kontaktai" size="lg">
+                {"Gauti pasi\u016Blym\u0105"}
+              </Button>
+              <Button
+                href="/atlikti-darbai"
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-white/50"
               >
-                <div>
-                  <div className="text-2xl md:text-3xl font-bold text-amber">
-                    {stat.value}
-                    {stat.suffix}
+                Atlikti darbai
+              </Button>
+            </motion.div>
+
+            {/* Stats strip */}
+            <motion.div
+              variants={fadeUp}
+              className="flex items-center gap-5 md:gap-7 pt-8 border-t border-white/15"
+            >
+              {STATS.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className="flex items-center gap-5 md:gap-7"
+                >
+                  <div>
+                    <div className="text-2xl md:text-3xl font-bold text-amber">
+                      {stat.value}
+                      {stat.suffix}
+                    </div>
+                    <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/50 mt-1">
+                      {stat.label}
+                    </div>
                   </div>
-                  <div className="text-xs uppercase tracking-widest text-white/60 mt-1">
-                    {stat.label}
-                  </div>
+                  {index < STATS.length - 1 && (
+                    <div className="w-px h-10 bg-white/15" />
+                  )}
                 </div>
-                {index < STATS.length - 1 && (
-                  <div className="w-px h-10 bg-white/20" />
-                )}
-              </div>
-            ))}
+              ))}
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
+
+        {/* Right — Photo */}
+        <div className="relative min-h-[50vh] lg:min-h-0 order-1 lg:order-2">
+          <Image
+            src="/images/portfolio/paving/paving-012.jpg"
+            alt="Arversa trinkelių klojimo darbai"
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+          {/* Subtle gradient on left edge for blending into charcoal */}
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-charcoal/40 to-transparent hidden lg:block" />
+        </div>
       </div>
 
       {/* Scroll indicator */}
