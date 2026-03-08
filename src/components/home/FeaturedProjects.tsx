@@ -8,7 +8,7 @@ import { Button } from "@/components/shared/Button";
 import { PORTFOLIO_ITEMS, PORTFOLIO_CATEGORIES } from "@/lib/data/portfolio";
 
 /** Pick 6 items from different categories for variety */
-const FEATURED_IDS = ["p1", "m1", "w1", "i1", "e1", "l1"];
+const FEATURED_IDS = ["p1", "m1", "w1", "d1", "e1", "l1"];
 const FEATURED_ITEMS = FEATURED_IDS.map((id) =>
   PORTFOLIO_ITEMS.find((item) => item.id === id),
 ).filter(Boolean) as (typeof PORTFOLIO_ITEMS)[number][];

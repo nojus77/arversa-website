@@ -13,7 +13,7 @@ export const SERVICES: Service[] = [
     title: "Technikos nuoma",
     description:
       "Mini krautuvai (BOBCAT), ekskavatoriai, mini ekskavatoriai ir savivartės iki 12 tonų su vairuotojais.",
-    image: "/images/services/technikos-nuoma.jpg",
+    image: "/images/services/loader.jpg",
     href: "/technikos-nuoma",
     icon: "Truck",
   },
@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
     title: "Atliekų išvežimas",
     description:
       "Statybinių atliekų, šiukšlių ir grunto išvežimas. Konteinerių nuoma ir transportavimas.",
-    image: "/images/services/atlieku-isvezimas.jpg",
+    image: "/images/services/atlieku-isvezimas.avif",
     href: "/atlieku-isvezimas",
     icon: "Trash2",
   },
@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
     title: "Griovimo darbai",
     description:
       "Nuo plytelių nuėmimo iki pastatų griovimo. Sienų griovimas, langų ir durų demontavimas.",
-    image: "/images/services/griovimas.jpg",
+    image: "/images/services/griovimas-new.jpg",
     href: null,
     icon: "Hammer",
   },
@@ -58,7 +58,7 @@ export const SERVICES: Service[] = [
     title: "Mūro darbai",
     description:
       "Keraminių plytų, blokelių (Fibo, Haus, Aeroc, Ytong) mūras. Kaminai ir tvoros.",
-    image: "/images/services/muras.jpg",
+    image: "/images/services/muras-new.jpg",
     href: null,
     icon: "Brick",
   },

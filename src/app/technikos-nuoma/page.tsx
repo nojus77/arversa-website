@@ -21,7 +21,7 @@ export default function TechnikosNuomaPage(): React.ReactElement {
       <PageHero
         title="Technikos nuoma"
         subtitle="Bobcat, ekskavatoriai ir savivartės su vairuotojais"
-        backgroundImage="/images/services/technikos-nuoma.jpg"
+        backgroundImage="/images/services/loader.jpg"
         breadcrumbs={[
           { label: "Pagrindinis", href: "/" },
           { label: "Technikos nuoma" },

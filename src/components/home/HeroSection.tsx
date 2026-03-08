@@ -117,12 +117,13 @@ export function HeroSection(): React.ReactElement {
         </div>
 
         {/* Right — Photo */}
-        <div className="relative min-h-[50vh] lg:min-h-0 order-1 lg:order-2">
+        <div className="relative min-h-[35vh] lg:min-h-0 order-1 lg:order-2">
           <Image
-            src="/images/portfolio/paving/paving-012.jpg"
-            alt="Arversa trinkelių klojimo darbai"
+            src="/images/hero-final.avif"
+            alt="Arversa komanda statybų aikštelėje"
             fill
             priority
+            quality={95}
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />

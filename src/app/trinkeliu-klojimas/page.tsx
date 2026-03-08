@@ -21,32 +21,12 @@ const GALLERY_IMAGES = [
     alt: "Trinkelių klojimas eliniu raštu privačiame kieme",
   },
   {
-    src: "/images/portfolio/paving/paving-002.jpg",
-    alt: "Pėsčiųjų takas su bordiūrais",
-  },
-  {
     src: "/images/portfolio/paving/paving-003.jpg",
     alt: "Trinkelių klojimas po pergola",
   },
   {
-    src: "/images/portfolio/paving/paving-004.jpg",
-    alt: "Bordiūrų montavimas daugiabučio kieme",
-  },
-  {
-    src: "/images/portfolio/paving/paving-005.jpg",
-    alt: "Šaligatvio statyba gatvėje",
-  },
-  {
-    src: "/images/portfolio/paving/paving-006.jpg",
-    alt: "Šaligatvio trinkelių klojimas",
-  },
-  {
     src: "/images/portfolio/paving/paving-007.jpg",
     alt: "Trinkelės prie komercinės degalinės",
-  },
-  {
-    src: "/images/portfolio/paving/paving-008.jpg",
-    alt: "Šaligatvio klojimas su taktilėmis",
   },
   {
     src: "/images/portfolio/paving/paving-009.jpg",

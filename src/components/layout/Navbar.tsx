@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/constants";
@@ -40,11 +41,15 @@ export function Navbar(): React.ReactElement {
       >
         <div className="max-w-[1200px] mx-auto px-6 w-full flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="/"
-            className="font-heading text-2xl text-amber tracking-wide hover:text-amber-light transition-colors"
-          >
-            ARVERSA
+          <a href="/" className="shrink-0">
+            <Image
+              src="/images/arversa-logo.png"
+              alt="Arversa"
+              width={180}
+              height={52}
+              className="h-12 w-auto"
+              priority
+            />
           </a>
 
           {/* Desktop nav */}

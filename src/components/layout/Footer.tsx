@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { COMPANY, NAV_ITEMS } from "@/lib/constants";
 import { formatPhone } from "@/lib/utils";
@@ -19,11 +20,14 @@ export function Footer(): React.ReactElement {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Col 1: Logo & description */}
           <div>
-            <a
-              href="/"
-              className="inline-block font-heading text-2xl text-amber tracking-wide mb-4"
-            >
-              ARVERSA
+            <a href="/" className="inline-block mb-4">
+              <Image
+                src="/images/arversa-logo.png"
+                alt="Arversa"
+                width={180}
+                height={52}
+                className="h-12 w-auto"
+              />
             </a>
             <p className="text-white/60 text-sm leading-relaxed">
               Statybos ir gerbuvio darbai visoje Lietuvoje. Technikos nuoma,
@@ -87,20 +91,13 @@ export function Footer(): React.ReactElement {
                 <Clock className="w-4 h-4 text-amber shrink-0 mt-0.5" />
                 <div>
                   <p>Pirmadienis - Penktadienis</p>
-                  <p className="text-white/80">8:00 - 18:00</p>
+                  <p className="text-white/80">8:00 - 19:00 val.</p>
                 </div>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-white/60">
                 <Clock className="w-4 h-4 text-amber shrink-0 mt-0.5" />
                 <div>
-                  <p>Sestadienis</p>
-                  <p className="text-white/80">Pagal susitarima</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-2.5 text-sm text-white/60">
-                <Clock className="w-4 h-4 text-amber shrink-0 mt-0.5" />
-                <div>
-                  <p>Sekmadienis</p>
+                  <p>Šeštadienis - Sekmadienis</p>
                   <p className="text-white/80">Nedirbame</p>
                 </div>
               </li>
@@ -113,9 +110,17 @@ export function Footer(): React.ReactElement {
       <div className="border-t border-white/10">
         <div className="max-w-[1200px] mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <p>
-            &copy; {COMPANY.founded}&ndash;{currentYear} {COMPANY.name}
+            &copy; {currentYear} {COMPANY.name}
           </p>
-          <p>Visos teises saugomos</p>
+          <div className="flex items-center gap-4">
+            <p>Visos teises saugomos</p>
+            <a
+              href="/privatumo-politika"
+              className="hover:text-amber transition-colors"
+            >
+              Privatumo politika
+            </a>
+          </div>
         </div>
       </div>
     </footer>

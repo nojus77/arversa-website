@@ -28,14 +28,6 @@ const GALLERY_IMAGES = [
     alt: "Parkavimo aikštelės žemės darbai",
   },
   {
-    src: "/images/portfolio/excavation/excavation-004.jpg",
-    alt: "Takų ir aikštelės paruošimas parke",
-  },
-  {
-    src: "/images/portfolio/excavation/excavation-005.jpg",
-    alt: "Šlaito sutvirtinimas geocelėmis",
-  },
-  {
     src: "/images/portfolio/excavation/excavation-006.jpg",
     alt: "Teritorijos paruošimas naujai statybai",
   },

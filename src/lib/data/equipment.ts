@@ -51,7 +51,7 @@ export const EQUIPMENT: Equipment[] = [
     name: "Savivartė (iki 12 t)",
     description:
       "Savivartė su vairuotoju medžiagų pristatymui ir atliekų išvežimui. Žemė, žvyras, smėlis, grutas.",
-    image: "/images/services/atlieku-isvezimas.jpg",
+    image: "/images/services/savivarte.jpeg",
     specs: [
       { label: "Keliamoji galia", value: "iki 12 t" },
       { label: "Kėbulo tūris", value: "8 m³" },

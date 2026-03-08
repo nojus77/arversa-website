@@ -20,7 +20,7 @@ export default function AtliekuIsvezimas(): React.ReactElement {
       <PageHero
         title="Atliekų išvežimas"
         subtitle="Statybinių atliekų ir šiukšlių išvežimas visoje Lietuvoje"
-        backgroundImage="/images/services/atlieku-isvezimas.jpg"
+        backgroundImage="/images/services/atlieku-isvezimas.avif"
         breadcrumbs={[
           { label: "Pagrindinis", href: "/" },
           { label: "Atliekų išvežimas" },

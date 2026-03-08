@@ -6,7 +6,7 @@ export const COMPANY = {
   location: "Lentvaris, Lietuva",
   serviceArea: "Visa Lietuva",
   experience: "11+",
-  workingHours: "I-V 8:00–18:00",
+  workingHours: "I-V 8:00–19:00",
   founded: 2008,
   mapQuery: "Lentvaris,+Lithuania",
   mapEmbedUrl:
