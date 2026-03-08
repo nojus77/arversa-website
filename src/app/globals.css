@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #1a1a2e;
+  --color-charcoal-light: #2a2a42;
+  --color-amber: #d4a853;
+  --color-amber-light: #e8c878;
+  --color-amber-dark: #b8923f;
+  --color-offwhite: #f4f4f8;
+  --color-body: #6e6e80;
+  --color-subtle: #a0a0b0;
+  --color-border: #e2e2e8;
+
+  --font-heading: "DM Serif Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-body);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-charcoal);
+}
+
+::selection {
+  background-color: var(--color-amber);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-offwhite);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-subtle);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-body);
+}
+
+/* Hide scrollbar for horizontal filter rows */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
