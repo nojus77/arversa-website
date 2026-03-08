@@ -94,43 +94,42 @@ export async function POST(request: Request): Promise<NextResponse> {
 
     const { error: sendError } = await resend.emails.send({
       from: "Arversa Svetainė <onboarding@resend.dev>",
+      replyTo: safeEmail,
       to: contactEmail,
       subject: `Nauja užklausa: ${safeName} — ${safeService}`,
       html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
-          <div style="background: #111111; color: white; padding: 24px; border-radius: 12px 12px 0 0;">
-            <h1 style="margin: 0; font-size: 20px; font-weight: 600;">Nauja užklausa iš svetainės</h1>
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 16px;">
+          <div style="background: #111111; color: white; padding: 20px 24px; border-radius: 12px 12px 0 0;">
+            <h1 style="margin: 0; font-size: 18px; font-weight: 600;">Nauja užklausa iš svetainės</h1>
           </div>
           <div style="background: #ffffff; border: 1px solid #e0e0e0; border-top: none; padding: 24px; border-radius: 0 0 12px 12px;">
-            <table style="width: 100%; border-collapse: collapse;">
+            <p style="margin: 0 0 4px; font-size: 22px; font-weight: 700; color: #111111;">${safeName}</p>
+            <p style="margin: 0 0 16px; font-size: 14px; color: #888888;">Domisi: ${safeService}</p>
+
+            <div style="background: #f5f5f5; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+              <p style="margin: 0 0 4px; font-size: 12px; color: #888888; text-transform: uppercase; letter-spacing: 1px;">Žinutė</p>
+              <p style="margin: 0; font-size: 15px; color: #111111; white-space: pre-wrap; line-height: 1.5;">${safeMessage}</p>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
               <tr>
-                <td style="padding: 8px 0; color: #555555; width: 120px; vertical-align: top;">Vardas:</td>
-                <td style="padding: 8px 0; color: #111111; font-weight: 500;">${safeName}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; color: #555555; vertical-align: top;">Telefonas:</td>
-                <td style="padding: 8px 0; color: #111111; font-weight: 500;">
-                  <a href="tel:${safePhone}" style="color: #d4a853; text-decoration: none;">${safePhone}</a>
+                <td style="padding: 6px 0; font-size: 13px; color: #888888; width: 90px;">Telefonas</td>
+                <td style="padding: 6px 0; font-size: 15px;">
+                  <a href="tel:${safePhone}" style="color: #d4a853; text-decoration: none; font-weight: 600;">${safePhone}</a>
                 </td>
               </tr>
               <tr>
-                <td style="padding: 8px 0; color: #555555; vertical-align: top;">El. paštas:</td>
-                <td style="padding: 8px 0; color: #111111; font-weight: 500;">
-                  <a href="mailto:${safeEmail}" style="color: #d4a853; text-decoration: none;">${safeEmail}</a>
+                <td style="padding: 6px 0; font-size: 13px; color: #888888;">El. paštas</td>
+                <td style="padding: 6px 0; font-size: 15px;">
+                  <a href="mailto:${safeEmail}" style="color: #d4a853; text-decoration: none; font-weight: 600;">${safeEmail}</a>
                 </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; color: #555555; vertical-align: top;">Paslauga:</td>
-                <td style="padding: 8px 0; color: #111111; font-weight: 500;">${safeService}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; color: #555555; vertical-align: top;">Žinutė:</td>
-                <td style="padding: 8px 0; color: #111111; white-space: pre-wrap;">${safeMessage}</td>
               </tr>
             </table>
+
+            <a href="tel:${safePhone}" style="display: inline-block; background: #d4a853; color: #111111; font-weight: 600; font-size: 15px; padding: 12px 28px; border-radius: 8px; text-decoration: none;">Paskambinti</a>
           </div>
-          <p style="margin-top: 16px; font-size: 12px; color: #a0a0b0; text-align: center;">
-            Ši žinutė buvo išsiųsta per arversa.lt kontaktų formą
+          <p style="margin-top: 12px; font-size: 11px; color: #aaaaaa; text-align: center;">
+            Gauta per arversa.lt kontaktų formą
           </p>
         </div>
       `,
