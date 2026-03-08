@@ -122,15 +122,15 @@ export function ContactForm(): React.ReactElement {
 
   const inputClasses = (field: keyof FormErrors): string =>
     cn(
-      "w-full rounded-lg border px-4 py-3.5 text-charcoal bg-white",
+      "w-full rounded-lg border-0 border-b-2 px-4 py-4 text-charcoal bg-gray-50",
       "placeholder:text-subtle",
-      "transition-colors duration-200",
-      "focus:outline-none focus:border-amber focus:ring-2 focus:ring-amber/20",
-      errors[field] ? "border-red-400" : "border-border",
+      "transition-all duration-300",
+      "focus:outline-none focus:border-b-2 focus:border-amber focus:bg-white focus:ring-0",
+      errors[field] ? "border-red-400" : "border-gray-200",
     );
 
   return (
-    <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-border">
+    <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border-0">
       <h3 className="font-heading text-2xl text-charcoal mb-2">
         Parašykite mums
       </h3>
@@ -146,7 +146,7 @@ export function ContactForm(): React.ReactElement {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col items-center justify-center py-16"
+            className="flex flex-col items-center justify-center py-20"
           >
             <motion.div
               initial={{ scale: 0 }}
@@ -157,14 +157,14 @@ export function ContactForm(): React.ReactElement {
                 damping: 15,
                 delay: 0.1,
               }}
-              className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6"
             >
-              <Check className="w-8 h-8 text-green-600" />
+              <Check className="w-10 h-10 text-green-600" />
             </motion.div>
-            <p className="text-lg font-medium text-charcoal">
+            <p className="text-xl font-medium text-charcoal">
               Žinutė išsiųsta!
             </p>
-            <p className="text-body mt-1">
+            <p className="text-body mt-2">
               Susisieksime su jumis artimiausiu metu.
             </p>
           </motion.div>
@@ -188,12 +188,12 @@ export function ContactForm(): React.ReactElement {
               />
             </div>
 
-            <div className="space-y-5">
+            <div className="space-y-6">
               {/* Name */}
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-charcoal mb-1.5"
+                  className="block text-xs font-semibold uppercase tracking-wider text-charcoal/70 mb-2"
                 >
                   Vardas
                 </label>
@@ -208,16 +208,18 @@ export function ContactForm(): React.ReactElement {
                   required
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                  <p className="text-red-500 text-xs mt-1.5 font-medium">
+                    {errors.name}
+                  </p>
                 )}
               </div>
 
               {/* Phone & Email row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-charcoal mb-1.5"
+                    className="block text-xs font-semibold uppercase tracking-wider text-charcoal/70 mb-2"
                   >
                     Telefonas
                   </label>
@@ -232,14 +234,16 @@ export function ContactForm(): React.ReactElement {
                     required
                   />
                   {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                    <p className="text-red-500 text-xs mt-1.5 font-medium">
+                      {errors.phone}
+                    </p>
                   )}
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-charcoal mb-1.5"
+                    className="block text-xs font-semibold uppercase tracking-wider text-charcoal/70 mb-2"
                   >
                     El. paštas
                   </label>
@@ -254,7 +258,9 @@ export function ContactForm(): React.ReactElement {
                     required
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                    <p className="text-red-500 text-xs mt-1.5 font-medium">
+                      {errors.email}
+                    </p>
                   )}
                 </div>
               </div>
@@ -263,7 +269,7 @@ export function ContactForm(): React.ReactElement {
               <div>
                 <label
                   htmlFor="service"
-                  className="block text-sm font-medium text-charcoal mb-1.5"
+                  className="block text-xs font-semibold uppercase tracking-wider text-charcoal/70 mb-2"
                 >
                   Paslauga
                 </label>
@@ -274,6 +280,9 @@ export function ContactForm(): React.ReactElement {
                   onChange={handleChange}
                   className={cn(
                     inputClasses("service"),
+                    "appearance-none bg-[length:16px_16px] bg-[position:right_16px_center] bg-no-repeat",
+                    "bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23555555%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%2F%3E%3C%2Fsvg%3E')]",
+                    "pr-10",
                     !form.service && "text-subtle",
                   )}
                   required
@@ -288,7 +297,9 @@ export function ContactForm(): React.ReactElement {
                   ))}
                 </select>
                 {errors.service && (
-                  <p className="text-red-500 text-sm mt-1">{errors.service}</p>
+                  <p className="text-red-500 text-xs mt-1.5 font-medium">
+                    {errors.service}
+                  </p>
                 )}
               </div>
 
@@ -296,7 +307,7 @@ export function ContactForm(): React.ReactElement {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-charcoal mb-1.5"
+                  className="block text-xs font-semibold uppercase tracking-wider text-charcoal/70 mb-2"
                 >
                   Žinutė
                 </label>
@@ -306,18 +317,22 @@ export function ContactForm(): React.ReactElement {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Apibūdinkite savo poreikius..."
-                  rows={5}
-                  className={cn(inputClasses("message"), "resize-none")}
+                  className={cn(
+                    inputClasses("message"),
+                    "resize-none min-h-[120px]",
+                  )}
                   required
                 />
                 {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                  <p className="text-red-500 text-xs mt-1.5 font-medium">
+                    {errors.message}
+                  </p>
                 )}
               </div>
 
               {/* Error message */}
               {status === "error" && (
-                <p className="text-red-500 text-sm">
+                <p className="text-red-500 text-xs font-medium">
                   Klaida. Bandykite dar kartą.
                 </p>
               )}
@@ -328,9 +343,10 @@ export function ContactForm(): React.ReactElement {
                 disabled={status === "submitting"}
                 className={cn(
                   "w-full sm:w-auto inline-flex items-center justify-center gap-2",
-                  "rounded-lg font-medium px-7 py-3.5 text-base",
-                  "bg-amber text-charcoal",
-                  "hover:bg-amber-light hover:shadow-lg hover:shadow-amber/20",
+                  "rounded-xl font-medium px-10 py-4 text-lg",
+                  "bg-gradient-to-r from-amber to-amber-light text-charcoal",
+                  "shadow-lg shadow-amber/25",
+                  "hover:shadow-xl hover:shadow-amber/30",
                   "hover:scale-[1.02] active:scale-[0.98]",
                   "transition-all duration-300 ease-out",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2",

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, type LucideIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
@@ -8,7 +8,6 @@ interface ServiceCardProps {
   description: string;
   image: string;
   href?: string;
-  icon?: LucideIcon;
 }
 
 export function ServiceCard({
@@ -16,7 +15,6 @@ export function ServiceCard({
   description,
   image,
   href,
-  icon: Icon,
 }: ServiceCardProps): React.ReactElement {
   const Wrapper = href ? "a" : "div";
   const wrapperProps = href ? { href } : {};
@@ -38,11 +36,6 @@ export function ServiceCard({
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
         />
-        {Icon && (
-          <div className="absolute bottom-4 left-4 w-12 h-12 rounded-lg bg-amber/90 flex items-center justify-center shadow-lg">
-            <Icon className="w-6 h-6 text-charcoal" />
-          </div>
-        )}
       </div>
 
       {/* Body */}

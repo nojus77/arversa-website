@@ -12,7 +12,7 @@ export const EQUIPMENT: Equipment[] = [
     name: "Mini krautuvas (Bobcat)",
     description:
       "Kompaktiškas ir galingas mini krautuvas, idealus teritorijų paruošimui, grunto lyginimui ir medžiagų transportavimui. Paruošia apie 100 m² per darbo dieną.",
-    image: "/images/services/technikos-nuoma.jpg",
+    image: "/images/services/loader.jpg",
     specs: [
       { label: "Keliamoji galia", value: "iki 900 kg" },
       { label: "Variklio galia", value: "49 kW" },
@@ -25,7 +25,7 @@ export const EQUIPMENT: Equipment[] = [
     name: "Ekskavatorius",
     description:
       "Didelis ekskavatorius sunkiems žemės kasimo darbams, pamatų iškasimui ir didelių teritorijų paruošimui.",
-    image: "/images/services/zemes-kasimas.jpg",
+    image: "/images/services/excavator.jpg",
     specs: [
       { label: "Kaušo talpa", value: "iki 1.2 m³" },
       { label: "Kasimo gylis", value: "iki 5.5 m" },
@@ -38,7 +38,7 @@ export const EQUIPMENT: Equipment[] = [
     name: "Mini ekskavatorius",
     description:
       "Mažas ekskavatorius siaurai erdvei — idealus tranšėjoms, komunikacijoms ir mažiems kasimo darbams.",
-    image: "/images/services/zemes-kasimas.jpg",
+    image: "/images/services/zemes-kasimas-backhoe.jpg",
     specs: [
       { label: "Kaušo talpa", value: "iki 0.08 m³" },
       { label: "Kasimo gylis", value: "iki 2.5 m" },

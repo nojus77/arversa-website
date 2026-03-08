@@ -22,7 +22,7 @@ export const SERVICES: Service[] = [
     title: "Žemės kasimo darbai",
     description:
       "Žemės kasimas, lyginimas, pamatų kastuvai, tranšėjos ir teritorijų paruošimas statyboms.",
-    image: "/images/services/zemes-kasimas.jpg",
+    image: "/images/services/zemes-kasimas-backhoe.jpg",
     href: "/zemes-kasimo-darbai",
     icon: "Mountain",
   },
@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
     title: "Sniego valymas",
     description:
       "Automobilių aikštelių, prekybos centrų, privačių kiemų ir kelių sniego valymas ir išvežimas.",
-    image: "/images/services/sniego-valymas.jpg",
+    image: "/images/services/snow-clean.jpg",
     href: null,
     icon: "Snowflake",
   },
