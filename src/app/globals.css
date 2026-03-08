@@ -57,6 +57,16 @@ h6 {
   background: var(--color-body);
 }
 
+/* Testimonials auto-scroll carousel */
+@keyframes testimonial-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Hide scrollbar for horizontal filter rows */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;

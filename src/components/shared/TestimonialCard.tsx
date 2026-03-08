@@ -15,17 +15,9 @@ export function TestimonialCard({
 }: TestimonialCardProps): React.ReactElement {
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg relative">
-      {/* Decorative quote mark */}
-      <span
-        className="absolute top-4 left-6 text-6xl font-heading text-amber/20 leading-none select-none"
-        aria-hidden="true"
-      >
-        &ldquo;
-      </span>
-
       {/* Quote */}
-      <p className="text-lg text-charcoal italic leading-relaxed mt-6 mb-6">
-        &ldquo;{quote}&rdquo;
+      <p className="text-lg text-charcoal italic leading-relaxed mb-6">
+        {quote}
       </p>
 
       {/* Star rating */}

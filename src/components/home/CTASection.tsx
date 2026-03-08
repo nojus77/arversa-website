@@ -1,16 +1,18 @@
 "use client";
 
-import { Phone } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { ContactForm } from "@/components/contact/ContactForm";
+import { MapEmbed } from "@/components/contact/MapEmbed";
 import { Container } from "@/components/shared/Container";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { Button } from "@/components/shared/Button";
 import { COMPANY } from "@/lib/constants";
 
 export function CTASection(): React.ReactElement {
   const telHref = `tel:${COMPANY.phone.replace(/\s/g, "")}`;
+  const mailHref = `mailto:${COMPANY.email}`;
 
   return (
-    <section className="relative py-20 lg:py-28 overflow-hidden">
+    <section id="kontaktai" className="relative py-20 lg:py-28 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal-light to-charcoal" />
 
@@ -34,49 +36,64 @@ export function CTASection(): React.ReactElement {
       />
 
       <Container className="relative z-10">
-        <div className="text-center max-w-2xl mx-auto">
+        {/* Section header */}
+        <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
           <ScrollReveal>
             <h2 className="font-heading text-3xl md:text-5xl text-white leading-tight mb-5">
-              {"Pasiruo\u0161\u0119 prad\u0117ti projekt\u0105?"}
+              Susisiekite su mumis
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10">
+            <p className="text-lg md:text-xl text-white/70 leading-relaxed">
               {"Gaukite nemokam\u0105 pasi\u016Blym\u0105 per 2 darbo valandas"}
             </p>
           </ScrollReveal>
+        </div>
 
-          <ScrollReveal delay={0.2}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <Button
-                href={telHref}
-                className="bg-white text-charcoal hover:bg-offwhite hover:shadow-lg"
-                size="lg"
-              >
-                <Phone className="w-5 h-5" />
-                Skambinti dabar
-              </Button>
-              <Button
-                href="/kontaktai"
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-white/50"
-              >
-                {"Ra\u0161yti \u017Einut\u0119"}
-              </Button>
+        {/* Form + Map two-column layout */}
+        <ScrollReveal delay={0.2}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left: Contact form */}
+            <div>
+              <ContactForm />
             </div>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.3}>
+            {/* Right: Map */}
+            <div className="min-h-[400px]">
+              <MapEmbed />
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Info strip */}
+        <ScrollReveal delay={0.3}>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+            {/* Phone */}
             <a
               href={telHref}
-              className="inline-block text-2xl md:text-3xl font-heading text-amber hover:text-amber-light transition-colors duration-300"
+              className="flex items-center gap-2.5 text-white/80 hover:text-amber transition-colors duration-200 group"
             >
-              {COMPANY.phone}
+              <Phone className="w-5 h-5 text-amber group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-base font-medium">{COMPANY.phone}</span>
             </a>
-          </ScrollReveal>
-        </div>
+
+            {/* Email */}
+            <a
+              href={mailHref}
+              className="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors duration-200 group"
+            >
+              <Mail className="w-5 h-5 text-white/60 group-hover:text-white group-hover:scale-110 transition-all duration-200" />
+              <span className="text-base font-medium">{COMPANY.email}</span>
+            </a>
+
+            {/* Address */}
+            <div className="flex items-center gap-2.5 text-white/80">
+              <MapPin className="w-5 h-5 text-white/60" />
+              <span className="text-base font-medium">{COMPANY.location}</span>
+            </div>
+          </div>
+        </ScrollReveal>
       </Container>
     </section>
   );

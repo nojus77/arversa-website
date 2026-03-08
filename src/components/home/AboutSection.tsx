@@ -60,12 +60,13 @@ export function AboutSection(): React.ReactElement {
                 {STATS.map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-white rounded-xl p-5 shadow-lg border border-border/50"
+                    className="bg-white rounded-xl p-3 shadow-lg border border-border/50"
                   >
                     <StatsCounter
                       value={stat.value}
                       suffix={stat.suffix}
                       label={stat.label}
+                      size="sm"
                     />
                   </div>
                 ))}

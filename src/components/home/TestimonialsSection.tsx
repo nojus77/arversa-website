@@ -6,10 +6,12 @@ import { TestimonialCard } from "@/components/shared/TestimonialCard";
 import { TESTIMONIALS } from "@/lib/data/testimonials";
 
 export function TestimonialsSection(): React.ReactElement {
+  const duplicated = [...TESTIMONIALS, ...TESTIMONIALS];
+
   return (
     <section className="py-20 lg:py-28 bg-charcoal">
       <Container>
-        {/* Header — custom here since we need white text on dark bg */}
+        {/* Header */}
         <ScrollReveal className="text-center mb-14">
           <span className="inline-block text-sm font-semibold uppercase tracking-widest text-amber mb-4">
             Atsiliepimai
@@ -18,20 +20,26 @@ export function TestimonialsSection(): React.ReactElement {
             {"K\u0105 sako m\u016Bs\u0173 klientai"}
           </h2>
         </ScrollReveal>
+      </Container>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((testimonial, index) => (
-            <ScrollReveal key={testimonial.id} delay={index * 0.15}>
+      {/* Auto-scrolling carousel */}
+      <div className="overflow-hidden group">
+        <div className="flex gap-6 w-max animate-[testimonial-scroll_45s_linear_infinite] group-hover:[animation-play-state:paused]">
+          {duplicated.map((testimonial, index) => (
+            <div
+              key={`${testimonial.id}-${index}`}
+              className="w-[280px] md:w-[350px] shrink-0"
+            >
               <TestimonialCard
                 quote={testimonial.quote}
                 name={testimonial.name}
                 role={testimonial.role}
                 rating={testimonial.rating}
               />
-            </ScrollReveal>
+            </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
