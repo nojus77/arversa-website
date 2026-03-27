@@ -8,6 +8,19 @@ export interface Equipment {
 
 export const EQUIPMENT: Equipment[] = [
   {
+    id: "dump-truck",
+    name: "Savivartė 6x6 su fiskar",
+    description:
+      "Savivartė su vairuotoju medžiagų pristatymui ir atliekų išvežimui. Žemė, žvyras, smėlis, grutas.",
+    image: "/images/services/savivarte-6x6-fiskar.jpeg",
+    specs: [
+      { label: "Keliamoji galia", value: "iki 12 t" },
+      { label: "Kėbulo tūris", value: "8 m³" },
+      { label: "Tipas", value: "Savivartė" },
+      { label: "Vairuotojas", value: "Įskaičiuotas" },
+    ],
+  },
+  {
     id: "bobcat",
     name: "Mini krautuvas (Bobcat)",
     description:
@@ -44,19 +57,6 @@ export const EQUIPMENT: Equipment[] = [
       { label: "Kasimo gylis", value: "iki 2.5 m" },
       { label: "Plotis", value: "0.99 m" },
       { label: "Svoris", value: "~1,800 kg" },
-    ],
-  },
-  {
-    id: "dump-truck",
-    name: "Savivartė 6x6 su fiskar",
-    description:
-      "Savivartė su vairuotoju medžiagų pristatymui ir atliekų išvežimui. Žemė, žvyras, smėlis, grutas.",
-    image: "/images/services/savivarte-6x6-fiskar.jpeg",
-    specs: [
-      { label: "Keliamoji galia", value: "iki 12 t" },
-      { label: "Kėbulo tūris", value: "8 m³" },
-      { label: "Tipas", value: "Savivartė" },
-      { label: "Vairuotojas", value: "Įskaičiuotas" },
     ],
   },
 ];

@@ -27,6 +27,15 @@ export const SERVICES: Service[] = [
     icon: "Mountain",
   },
   {
+    id: "vaiku-zaidimu-aiksteles",
+    title: "Vaikų žaidimų aikštelės",
+    description:
+      "Vaikų žaidimų aikštelių įrengimas, montavimas ir teritorijos paruošimas. Saugi ir kokybiška aplinka vaikams.",
+    image: "/images/services/vaiku-zaidimu-aiksteles.jpg",
+    href: null,
+    icon: "Baby",
+  },
+  {
     id: "trinkeliu-klojimas",
     title: "Trinkelių klojimas",
     description:
@@ -43,6 +52,15 @@ export const SERVICES: Service[] = [
     image: "/images/services/atlieku-isvezimas.avif",
     href: "/atlieku-isvezimas",
     icon: "Trash2",
+  },
+  {
+    id: "neigaliuju-infrastruktura",
+    title: "Infrastruktūra neįgaliesiems",
+    description:
+      "Vidaus ir lauko infrastruktūros pritaikymas neįgaliesiems — pandusai, takai, aikštelės ir prieinamumo sprendimai.",
+    image: "/images/services/neigaliuju-infra.jpg",
+    href: null,
+    icon: "Accessibility",
   },
   {
     id: "griovimas",
@@ -79,23 +97,5 @@ export const SERVICES: Service[] = [
     image: "/images/services/snow-clean.jpg",
     href: null,
     icon: "Snowflake",
-  },
-  {
-    id: "vaiku-zaidimu-aiksteles",
-    title: "Vaikų žaidimų aikštelės",
-    description:
-      "Vaikų žaidimų aikštelių įrengimas, montavimas ir teritorijos paruošimas. Saugi ir kokybiška aplinka vaikams.",
-    image: "/images/services/vaiku-zaidimu-aiksteles.jpg",
-    href: null,
-    icon: "Baby",
-  },
-  {
-    id: "neigaliuju-infrastruktura",
-    title: "Infrastruktūra neįgaliesiems",
-    description:
-      "Vidaus ir lauko infrastruktūros pritaikymas neįgaliesiems — pandusai, takai, aikštelės ir prieinamumo sprendimai.",
-    image: "/images/services/neigaliuju-infra.jpg",
-    href: null,
-    icon: "Accessibility",
   },
 ];
