@@ -44,7 +44,7 @@ export function HeroSection(): React.ReactElement {
             {/* Badge */}
             <motion.div variants={fadeUp}>
               <span className="inline-block rounded-full bg-amber/15 px-5 py-2 text-sm font-medium text-amber mb-6 lg:mb-8">
-                {"11+ met\u0173 patirties"}
+                {"11+ metų patirties"}
               </span>
             </motion.div>
 
@@ -53,7 +53,7 @@ export function HeroSection(): React.ReactElement {
               variants={fadeUp}
               className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white leading-[1.1] mb-5 lg:mb-6"
             >
-              {"Statybos ir gerb\u016Bvio"}
+              {"Statybos ir gerbūvio"}
               <br />
               {"darbai visoje"}
               <br />
@@ -66,7 +66,7 @@ export function HeroSection(): React.ReactElement {
               className="text-lg md:text-xl text-white/70 leading-relaxed max-w-lg mb-8 lg:mb-10"
             >
               {
-                "Trinkeli\u0173 klojimas, technikos nuoma, \u017Eem\u0117s kasimas ir griovimo darbai \u2014 nuo 2008 met\u0173."
+                "Trinkelių klojimas, technikos nuoma, žemės kasimas ir griovimo darbai — nuo 2008 metų."
               }
             </motion.p>
 
@@ -76,7 +76,7 @@ export function HeroSection(): React.ReactElement {
               className="flex flex-wrap gap-4 mb-12 lg:mb-16"
             >
               <Button href="/kontaktai" size="lg">
-                {"Gauti pasi\u016Blym\u0105"}
+                {"Gauti pasiūlymą"}
               </Button>
               <Button
                 href="/atlikti-darbai"
@@ -119,8 +119,8 @@ export function HeroSection(): React.ReactElement {
         {/* Right — Photo */}
         <div className="relative min-h-[35vh] lg:min-h-0 order-1 lg:order-2">
           <Image
-            src="/images/hero-final.avif"
-            alt="Arversa komanda statybų aikštelėje"
+            src="/images/hero-trinkeliu-klojimas.jpg"
+            alt="Trinkelių klojimo darbai — Arversa"
             fill
             priority
             quality={95}
@@ -145,7 +145,7 @@ export function HeroSection(): React.ReactElement {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-xs uppercase tracking-widest text-white/40">
-            {"\u017Di\u016Br\u0117ti \u017Eemyn"}
+            {"Žiūrėti žemyn"}
           </span>
           <ChevronDown className="w-5 h-5 text-white/40" />
         </motion.div>

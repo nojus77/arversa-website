@@ -12,10 +12,8 @@ export function ServicesGrid(): React.ReactElement {
       <Container>
         <SectionHeader
           label="Paslaugos"
-          title={"M\u016Bs\u0173 paslaugos"}
-          subtitle={
-            "Si\u016Blome plat\u0173 statybos ir gerb\u016Bvio darb\u0173 spektr\u0105"
-          }
+          title={"Mūsų paslaugos"}
+          subtitle={"Siūlome platų statybos ir gerbūvio darbų spektrą"}
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
