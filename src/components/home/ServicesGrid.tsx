@@ -8,7 +8,7 @@ import { SERVICES } from "@/lib/data/services";
 
 export function ServicesGrid(): React.ReactElement {
   return (
-    <section className="py-20 lg:py-28 bg-offwhite">
+    <section id="paslaugos" className="py-20 lg:py-28 bg-offwhite">
       <Container>
         <SectionHeader
           label="Paslaugos"

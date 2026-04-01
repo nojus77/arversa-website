@@ -11,7 +11,7 @@ import { ExcavationGallery } from "@/components/excavation/ExcavationGallery";
 export const metadata: Metadata = {
   title: "Žemės kasimo darbai",
   description:
-    "Profesionalūs žemės kasimo darbai — žemės kasimas, teritorijų lyginimas, pamatų kastuvai, tranšėjų kasimas. UAB Arversa, 11+ metų patirties.",
+    "Profesionalūs žemės kasimo darbai — žemės kasimas, teritorijų lyginimas, pamatų kastuvai, tranšėjų kasimas. UAB Arversa, 18+ metų patirties.",
 };
 
 const GALLERY_IMAGES = [

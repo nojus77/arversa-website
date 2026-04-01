@@ -57,7 +57,7 @@ export function AboutSection(): React.ReactElement {
           <div>
             <SectionHeader
               label="Apie mus"
-              title={"Patikima komanda su 11+ met\u0173 patirtimi"}
+              title={"Patikima komanda su 18+ metų patirtimi"}
               centered={false}
             />
 
@@ -65,7 +65,7 @@ export function AboutSection(): React.ReactElement {
               <div className="space-y-4 text-body leading-relaxed mb-8">
                 <p>
                   {
-                    "UAB Arversa \u2014 tai patikima statybos ir gerb\u016Bvio darb\u0173 \u012Fmon\u0117, veikianti nuo 2008 met\u0173. Per daugiau nei 11 met\u0173 sukaup\u0117me didel\u0119 patirt\u012F \u012Fvairiose statybos srityse \u2014 nuo trinkeli\u0173 klojimo iki sud\u0117ting\u0173 \u017Eem\u0117s kasimo darb\u0173."
+                    "UAB Arversa \u2014 tai patikima statybos ir gerb\u016Bvio darb\u0173 \u012Fmon\u0117, veikianti nuo 2008 met\u0173. Per daugiau nei 18 met\u0173 sukaup\u0117me didel\u0119 patirt\u012F \u012Fvairiose statybos srityse \u2014 nuo trinkeli\u0173 klojimo iki sud\u0117ting\u0173 \u017Eem\u0117s kasimo darb\u0173."
                   }
                 </p>
                 <p>

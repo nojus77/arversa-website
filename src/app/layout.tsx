@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Arversa",
   },
   description:
-    "UAB Arversa — trinkelių klojimas, technikos nuoma, žemės kasimo darbai, atliekų išvežimas ir griovimo darbai. 11+ metų patirties. Dirbame visoje Lietuvoje.",
+    "UAB Arversa — trinkelių klojimas, technikos nuoma, žemės kasimo darbai, atliekų išvežimas ir griovimo darbai. 18+ metų patirties. Dirbame visoje Lietuvoje.",
   keywords: [
     "trinkelių klojimas",
     "technikos nuoma",

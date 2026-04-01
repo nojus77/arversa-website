@@ -32,7 +32,7 @@ export const SERVICES: Service[] = [
     description:
       "Vaikų žaidimų aikštelių įrengimas, montavimas ir teritorijos paruošimas. Saugi ir kokybiška aplinka vaikams.",
     image: "/images/services/vaiku-zaidimu-aiksteles.jpg",
-    href: null,
+    href: "/vaiku-zaidimu-aiksteles",
     icon: "Baby",
   },
   {
@@ -54,12 +54,21 @@ export const SERVICES: Service[] = [
     icon: "Trash2",
   },
   {
+    id: "sporto-aiksteles",
+    title: "Sporto aikštelės",
+    description:
+      "Sporto aikštelių įrengimas ir montavimas. Krepšinio, futbolo, tinklinio aikštelės, lauko treniruokliai ir guminės dangos.",
+    image: "/images/services/sporto-aiksteles.jpg",
+    href: "/sporto-aiksteles",
+    icon: "Trophy",
+  },
+  {
     id: "neigaliuju-infrastruktura",
     title: "Infrastruktūra neįgaliesiems",
     description:
       "Vidaus ir lauko infrastruktūros pritaikymas neįgaliesiems — pandusai, takai, aikštelės ir prieinamumo sprendimai.",
     image: "/images/services/neigaliuju-infra.jpg",
-    href: null,
+    href: "/neigaliuju-infrastruktura",
     icon: "Accessibility",
   },
   {
@@ -68,7 +77,7 @@ export const SERVICES: Service[] = [
     description:
       "Nuo plytelių nuėmimo iki pastatų griovimo. Sienų griovimas, langų ir durų demontavimas.",
     image: "/images/services/griovimas-new.jpg",
-    href: null,
+    href: "/griovimas",
     icon: "Hammer",
   },
   {
@@ -77,7 +86,7 @@ export const SERVICES: Service[] = [
     description:
       "Keraminių plytų, blokelių (Fibo, Haus, Aeroc, Ytong) mūras. Kaminai ir tvoros.",
     image: "/images/services/muras-new.jpg",
-    href: null,
+    href: "/muras",
     icon: "Brick",
   },
   {
@@ -86,7 +95,7 @@ export const SERVICES: Service[] = [
     description:
       "Trinkelių klojimas, kraštovaizdžio formavimas, apželdinimas, bordiūrų montavimas ir terasos.",
     image: "/images/services/gerbuvis.jpg",
-    href: null,
+    href: "/gerbuvis",
     icon: "TreePine",
   },
   {
@@ -95,7 +104,7 @@ export const SERVICES: Service[] = [
     description:
       "Automobilių aikštelių, prekybos centrų, privačių kiemų ir kelių sniego valymas ir išvežimas.",
     image: "/images/services/snow-clean.jpg",
-    href: null,
+    href: "/sniego-valymas",
     icon: "Snowflake",
   },
 ];

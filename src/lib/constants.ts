@@ -5,7 +5,7 @@ export const COMPANY = {
   email: "audrius.technuoma@gmail.com",
   location: "Lentvaris, Lietuva",
   serviceArea: "Visa Lietuva",
-  experience: "11+",
+  experience: "18+",
   workingHours: "I-V 8:00–19:00",
   founded: 2008,
   mapQuery: "Lentvaris,+Lithuania",
@@ -16,14 +16,28 @@ export const COMPANY = {
 export interface NavItem {
   label: string;
   href: string;
+  children?: NavItem[];
 }
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Pagrindinis", href: "/" },
-  { label: "Technikos nuoma", href: "/technikos-nuoma" },
-  { label: "Žemės kasimas", href: "/zemes-kasimo-darbai" },
-  { label: "Trinkelių klojimas", href: "/trinkeliu-klojimas" },
-  { label: "Atliekų išvežimas", href: "/atlieku-isvezimas" },
+  {
+    label: "Paslaugos",
+    href: "/#paslaugos",
+    children: [
+      { label: "Vaikų žaidimų aikštelės", href: "/vaiku-zaidimu-aiksteles" },
+      { label: "Sporto aikštelės", href: "/sporto-aiksteles" },
+      { label: "Technikos nuoma", href: "/technikos-nuoma" },
+      { label: "Žemės kasimas", href: "/zemes-kasimo-darbai" },
+      { label: "Trinkelių klojimas", href: "/trinkeliu-klojimas" },
+      { label: "Atliekų išvežimas", href: "/atlieku-isvezimas" },
+      { label: "Infrastruktūra neįgaliesiems", href: "/neigaliuju-infrastruktura" },
+      { label: "Gerbūvio darbai", href: "/gerbuvis" },
+      { label: "Griovimo darbai", href: "/griovimas" },
+      { label: "Mūro darbai", href: "/muras" },
+      { label: "Sniego valymas", href: "/sniego-valymas" },
+    ],
+  },
   { label: "Atlikti darbai", href: "/atlikti-darbai" },
   { label: "Kontaktai", href: "/kontaktai" },
 ];
