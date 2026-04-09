@@ -93,7 +93,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     const safeMessage = sanitize(message);
 
     const { error: sendError } = await resend.emails.send({
-      from: "Arversa Svetainė <onboarding@resend.dev>",
+      from: "Arversa Svetainė <noreply@inerci.lt>",
       replyTo: safeEmail,
       to: contactEmail,
       subject: `Nauja užklausa: ${safeName} — ${safeService}`,
